@@ -1,0 +1,14 @@
+[Unit]
+Description=GSM Status Reporter
+After=network-online.target
+
+[Service]
+ExecStart=/home/pi/Scripts/GSMStatusReporter/GSMStatusReporter
+WorkingDirectory=/home/pi/Scripts/GSMStatusReporter/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
